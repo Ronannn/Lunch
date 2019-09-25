@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>今天中午吃什么呢</title>
+</head>
+<style></style>
+<body style="text-align: center;padding-top: 100px;">
+<div>今天中午吃什么呢</div>
+<div id="choice" style="font-size: 40px;margin: 20px 0;">	
+</div>
+<input type="button" id="change" onclick="changeLunch()" value="不喜欢？换一个" />
+<script>
+    var lunch = new Array("黄焖鸡","凉皮","建国肉夹馍","马华","麻辣烫","欧巴石锅","笋尖米粉");
+    var i = Math.floor(Math.random()*lunch.length);
+    document.getElementById('choice').innerHTML = lunch[i];
+    function changeLunch() {
+    	var j = Math.floor(Math.random()*lunch.length);
+    	document.getElementById('choice').innerHTML = lunch[j];
+    }
+</script>
+</body>
+</html>
